@@ -57,6 +57,7 @@
 							"projects/shell/src/assets"
 						],
 						"styles": [
+							"./node_modules/@po-ui/style/css/po-theme-default.min.css",
 							"projects/shell/src/styles.scss"
 						],
 						"scripts": []
@@ -79,6 +80,7 @@
 							"projects/shell/src/assets"
 						],
 						"styles": [
+							"./node_modules/@po-ui/style/css/po-theme-default.min.css",
 							"projects/shell/src/styles.scss"
 						],
 						"scripts": []
@@ -119,7 +121,8 @@
 					},
 					"defaultConfiguration": "development",
 					"options": {
-						"port": 4200
+						"port": 4200,
+						"proxyConfig": "proxy-prod.conf.json"
 					}
 				}
 			}
@@ -178,6 +181,7 @@
 							"projects/login/src/assets"
 						],
 						"styles": [
+							"./node_modules/@po-ui/style/css/po-theme-default.min.css",
 							"projects/login/src/styles.scss"
 						],
 						"scripts": []
@@ -200,6 +204,7 @@
 							"projects/login/src/assets"
 						],
 						"styles": [
+							"./node_modules/@po-ui/style/css/po-theme-default.min.css",
 							"projects/login/src/styles.scss"
 						],
 						"scripts": []

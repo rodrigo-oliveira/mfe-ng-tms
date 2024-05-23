@@ -1,0 +1,7 @@
+<div class="po-wrapper">
+    <po-toolbar p-title="Transport Management System"></po-toolbar>
+    <app-menu></app-menu>
+    <router-outlet>
+      <po-loading-overlay [p-screen-lock]="true" *ngIf="isLoading"></po-loading-overlay>
+    </router-outlet>
+</div>

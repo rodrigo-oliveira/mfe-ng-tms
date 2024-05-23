@@ -1,4 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { Component, OnInit, inject } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   ngOnInit(): void {
@@ -16,7 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   search(): void {
-    alert('Not implemented in this demo!');
+    this.router.navigate(['dashboard'])
   }
 
 }

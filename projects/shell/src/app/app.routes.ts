@@ -1,25 +1,27 @@
 import { loadRemoteModule } from '@angular-architects/native-federation';
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './home/not-found/not-found.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 export const routes: Routes = [
-    {
+      {
         path: '',
-        component: HomeComponent,
         pathMatch: 'full',
+        redirectTo: '/login'
       },
-    
-      // Add this route:
       {
         path: 'login',
         loadComponent: () =>
           loadRemoteModule('login', './Component').then((m) => m.AppComponent),
       },
-
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('./dashboard/dashboard.routes').then(
+            (m) => m.dashboardRoutes
+          )
+      },
       {
         path: '**',
         component: NotFoundComponent,
       },
-    
 ];
