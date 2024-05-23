@@ -5,9 +5,7 @@
     "ng": "ng",
     "start": "npm run start:all",
     "start:all": "concurrently \"ng serve login\" \"ng serve shell\"",
-    "start:all:prod": "concurrently \"ng serve login\" \"ng serve shell\"",
-    "start:prod": "npm run start:all:prod",
-    "build": "ng build",
+    "build": "ng build login && ng build shell",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

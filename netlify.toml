@@ -2,3 +2,8 @@
   from = "/api/*"
   to = "https://server-tms.vercel.app/:splat"
   status = 200
+
+[[redirects]]
+  from = "/*"
+  status = 200
+  to = "/index.html"
